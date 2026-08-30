@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no">
+
+<title>Days of the Week</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- INNOVINE LOGO -->
+
+<div id="splash">
+
+    <img
+        src="assets/innovine-logo.png"
+        alt="Innovine Solutions">
+
+</div>
+
+
+
+<!-- START SCREEN -->
+
+<div id="startScreen" class="screen">
+
+    <div class="card">
+
+        <img
+            class="miniEngine"
+            src="assets/train.png"
+            alt="Train">
+
+        <h1>🚂 Days of the Week</h1>
+
+        <p>
+            Look at the train and find the missing day.
+        </p>
+
+        <p>
+            Tap the correct answer.
+        </p>
+
+        <button
+            id="startBtn"
+            type="button">
+            ▶ Start Game
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- GAME -->
+
+<div id="game" class="hidden">
+
+
+    <header>
+
+        <h1>Days of the Week</h1>
+
+        <div class="topRow">
+
+            <button
+                id="hearBtn"
+                type="button">
+                🔊 Hear
+            </button>
+
+            <div id="progress">
+                1 / 10
+            </div>
+
+            <div id="score">
+                ⭐ 0
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="questionBox">
+
+
+            <!-- TRAIN -->
+
+            <div class="trainWrap">
+
+
+                <!-- TRAIN ENGINE -->
+
+                <img
+                    class="engineImg"
+                    src="assets/train.png"
+                    alt="Train engine">
+
+
+
+                <!-- THREE COACHES -->
+
+                <div class="coachRow">
+
+
+                    <!-- YELLOW COACH -->
+
+                    <div class="coach">
+
+                        <img
+                            src="assets/coach-yellow-blank.png"
+                            alt="Yellow coach">
+
+                        <span id="coach1"></span>
+
+                    </div>
+
+
+
+                    <!-- BLUE COACH -->
+
+                    <div class="coach">
+
+                        <img
+                            src="assets/coach-blue-blank.png"
+                            alt="Blue coach">
+
+                        <span id="coach2"></span>
+
+                    </div>
+
+
+
+                    <!-- RED COACH -->
+
+                    <div class="coach">
+
+                        <img
+                            src="assets/coach-red-blank.png"
+                            alt="Red coach">
+
+                        <span id="coach3"></span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION -->
+
+            <p id="instruction">
+                Which day comes next?
+            </p>
+
+
+        </section>
+
+
+
+        <p class="choose">
+            Tap the missing day.
+        </p>
+
+
+
+        <!-- ANSWERS -->
+
+        <div
+            id="answers"
+            class="answers">
+        </div>
+
+
+
+        <!-- FEEDBACK -->
+
+        <div
+            id="feedback"
+            class="hidden">
+        </div>
+
+
+
+        <!-- CONFETTI -->
+
+        <div id="confetti">
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- END SCREEN -->
+
+<div
+    id="endScreen"
+    class="screen hidden">
+
+    <div class="card">
+
+        <div class="trophy">
+            🏆
+        </div>
+
+        <h1>
+            Great Job!
+        </h1>
+
+        <p id="finalScore">
+        </p>
+
+        <p>
+            🎉 You know the days of the week!
+        </p>
+
+        <button
+            id="againBtn"
+            type="button">
+            🔄 Play Again
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- AUDIO -->
+
+<audio
+    id="music"
+    loop
+    preload="auto">
+
+    <source
+        src="assets/background-music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<audio
+    id="correctSound"
+    preload="auto">
+
+    <source
+        src="assets/correct.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<audio
+    id="wrongSound"
+    preload="auto">
+
+    <source
+        src="assets/wrong.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- SCRIPTS -->
+
+<script src="speech.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
